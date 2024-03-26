@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SF Pro Display:wght@300;400;500;600;700;800;900&display=swap');
 
 *{
     margin: 0%;
@@ -9,14 +9,15 @@
     outline: none;
     scroll-behavior: smooth;
 
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display', sans-serif;
 }
 
 :root{
     --bg-color: #0A0A0A;
     --second-bg-color: #323946;
-    --text-color: #fff;
-    --main-color: #0ef;
+    --text-color: #FF2B51;
+    --text2-color: #fff;
+    --main-color: #FF6B94;
 }
 
 html {
@@ -27,4 +28,35 @@ html {
 body{
     background: var(--bg-color);
     color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color:var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
 }
