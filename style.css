@@ -137,14 +137,14 @@ span {
     background: var(--button-color);
     border-radius: 4rem;
     box-shadow: 0 0 1rem var(--text2-color);
-    font-size:1.6rem;
-    color:var(--second-bg-color);
+    font-size: 1.6rem;
+    color: #333333;
     letter-spacing: .1rem;
     font-weight: 600;
-    transition: .5s ease;
-
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Added transition for box-shadow and background-color */
 }
 
 .btn:hover {
-    box-shadow: none;
+    box-shadow: 0 0 2rem var(--text2-color); /* Increased box-shadow on hover */
+    background-color: #ffffff; /* Changed background color on hover */
 }
