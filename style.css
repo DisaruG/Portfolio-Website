@@ -14,6 +14,7 @@
 
 :root{
     --bg-color: #0A0A0A;
+    --bg-color2:#1A1A1A;
     --second-bg-color: #323946;
     --text-color: #FF2B51;
     --text2-color: #fff;
@@ -147,4 +148,17 @@ span {
 .btn:hover {
     box-shadow: 0 0 2rem var(--text2-color); /* Increased box-shadow on hover */
     background-color: #ffffff; /* Changed background color on hover */
+}
+
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    background: var(--bg-color);
+}
+
+.about-img img {
+    width: 35vw;
 }
