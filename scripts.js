@@ -6,9 +6,6 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
-
-
-
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -20,7 +17,7 @@ window.onscroll = () => {
         let id = sec.getAttribute('id');
 
         if(top >= offset && top < offset + height) {
-            navlink.forEach(links => {
+            navLinks.forEach(links => { // corrected typo: navlink -> navLinks
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
@@ -33,7 +30,24 @@ window.onscroll = () => {
 
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-    
 };
 
+new ScrollReveal({
+    reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
 
+new ScrollReveal().reveal('.home-container, .heading', { origin: 'top' }); // corrected typo: orgin -> origin
+new ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' }); // corrected typo: orgin -> origin
+new ScrollReveal().reveal('.home-container h1, .about-img', { origin: 'left' }); // corrected typo: orgin -> origin
+new ScrollReveal().reveal('.home-container p, .about-content', { origin: 'right' }); // corrected typo: orgin -> origin
+
+const typed = new Typed('.multiple-text', {
+    strings: ['UI/UX Engineer!', 'Mobile Developer!','3D/XR Developer!'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true,
+});
